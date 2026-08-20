@@ -88,6 +88,16 @@ altered[0] = { ...altered[0], label: '改了' };
 check('changed label', T.sameTopics(topics, altered), false);
 check('length diff', T.sameTopics(topics, topics.slice(1)), false);
 
+console.log('isTopicActive (回归：全部变蓝 bug)');
+// lastPerNode: u1 -> u1, s1 -> s1, a1 -> a1#h3（最后一个 heading）
+const lpn = { u1: 'u1', s1: 's1', a1: 'a1#h3' };
+check('activeKey 命中该节点且是最后一个 → active', T.isTopicActive('u1', { nodeKey: 'u1', key: 'u1' }, lpn), true);
+check('activeKey 命中但非最后（前面的 heading）→ 不 active', T.isTopicActive('a1', { nodeKey: 'a1', key: 'a1#h1' }, lpn), false);
+check('最后一个 heading 随节点高亮 → active', T.isTopicActive('a1', { nodeKey: 'a1', key: 'a1#h3' }, lpn), true);
+check('activeKey 不命中该节点 → 不 active', T.isTopicActive('s1', { nodeKey: 'u1', key: 'u1' }, lpn), false);
+check('activeKey 为 null → 全部不 active', T.isTopicActive(null, { nodeKey: 'u1', key: 'u1' }, lpn), false);
+check('空 lastPerNode 防御 → 不 active', T.isTopicActive('u1', { nodeKey: 'u1', key: 'u1' }, {}), false);
+
 console.log('module surface');
 check('inject', mod.inject, ['slots']);
 check('apply is function', typeof mod.apply, 'function');
