@@ -1,0 +1,65 @@
+{
+  "name": "dsh-conversation-toc",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness 对话大纲插件：在会话页右侧显示对话主题目录（类似 DeepSeek 网页版右边栏），随滚动高亮当前主题，点击可快捷跳转到对应消息位置。Conversation outline (TOC) plugin for DeepSeek Harness Web with scroll-spy highlight and jump-to-section navigation.",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "plugin",
+    "toc",
+    "outline",
+    "conversation",
+    "minimap",
+    "navigation"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twelvecarbon/dsh-conversation-toc.git"
+  },
+  "homepage": "https://github.com/twelvecarbon/dsh-conversation-toc#readme",
+  "bugs": {
+    "url": "https://github.com/twelvecarbon/dsh-conversation-toc/issues"
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "scripts",
+    "docs",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "check": "node scripts/check-package.js",
+    "test": "node scripts/smoke-test.cjs",
+    "prepublishOnly": "node scripts/check-package.js && node scripts/smoke-test.cjs",
+    "pack": "npm pack"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

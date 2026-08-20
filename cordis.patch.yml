@@ -1,0 +1,11 @@
+# dsh-conversation-toc — bundle patch layer.
+#
+# This file is the package's `dsh.bundle.patch` layer. When the package is
+# installed into a DSH profile (via `dsh plugin --profile web add
+# dsh-conversation-toc`, or manually), the loader applies this patch over the
+# profile's root entry list, mounting the plugin row. The row needs no
+# services: the whole feature runs in the browser half (lib/client.js), which
+# only requires the `slots` service to register its conversation header entry.
+- insert:
+    - id: conversation-toc
+      name: 'dsh-conversation-toc'
