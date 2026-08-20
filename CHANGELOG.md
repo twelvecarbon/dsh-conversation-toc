@@ -19,6 +19,9 @@
 - **修复全部主题同时显示蓝色的 bug**：高亮判断漏掉了与当前定位 `activeKey` 的比较，导致只要存在任意定位，所有 user/steering 主题（及各节点最后的 heading）都被判为激活。现改为 `activeKey` 命中该主题所在节点且为主题在该节点的最后一项时才高亮；新增 `isTopicActive` 回归测试覆盖该场景。
 - **滚动高亮改为「主题区间」判定**：原算法取阅读线上方最后一个聊天节点，翻到助手回答时定位键变成回答节点，导致当前主题蓝色消失。现只统计主题锚点行（`user` / `steering`），阅读线落在某主题锚点之后、下一个主题锚点之前，该主题即持续高亮——只要还在当前主题的内容范围内，蓝色就不会消失。
 
+### 文档
+- **README 改为 npm 一行命令安装**：`dsh plugin --profile web add dsh-conversation-toc` 为主安装方式（已发布到 npm），GitHub 仓库与本地 tarball 作为备选；手动安装章节同步更新（`pnpm add dsh-conversation-toc`）。
+
 ---
 
 ## v0.1.0 (2026-08-20)

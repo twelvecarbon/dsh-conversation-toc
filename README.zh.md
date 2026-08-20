@@ -53,17 +53,23 @@ dsh-conversation-toc 是面向 **DeepSeek Harness Web** 的**纯浏览器端**�
 
 ### 方式一（推荐）：一行命令
 
-包尚未发布到 npm，请从**本 GitHub 仓库**或**本地 tarball** 安装：
+已发布到 **npm**，一条命令即可安装：
 
 ```bash
-# 从 GitHub（推送本仓库后）
-dsh plugin --profile web add git+https://github.com/twelvecarbon/dsh-conversation-toc.git
-
-# 或从本地 tarball
-dsh plugin --profile web add C:\path\to\dsh-conversation-toc-0.1.1.tgz
+dsh plugin --profile web add dsh-conversation-toc
 ```
 
 安装后重启 dsh web 服务即可生效。
+
+> 想从源码安装？本 GitHub 仓库或本地 tarball 同样可以：
+>
+> ```bash
+> # 从 GitHub
+> dsh plugin --profile web add git+https://github.com/twelvecarbon/dsh-conversation-toc.git
+>
+> # 或从本地 tarball
+> dsh plugin --profile web add C:\path\to\dsh-conversation-toc-0.1.1.tgz
+> ```
 
 ### 方式二：手动安装
 
@@ -95,7 +101,7 @@ dsh plugin --profile web add C:\path\to\dsh-conversation-toc-0.1.1.tgz
 ### 1. 方法 A（推荐）：一条命令安装
 
 ```bash
-dsh plugin --profile web add git+https://github.com/twelvecarbon/dsh-conversation-toc.git
+dsh plugin --profile web add dsh-conversation-toc
 ```
 
 这条命令会做三件事（全部自动）：
@@ -114,7 +120,7 @@ dsh plugin --profile web add git+https://github.com/twelvecarbon/dsh-conversatio
 
 ```bash
 cd ~/.dsh/profiles/web
-pnpm add git+https://github.com/twelvecarbon/dsh-conversation-toc.git
+pnpm add dsh-conversation-toc
 # 或从本地目录 / tarball 安装
 # pnpm add C:\path\to\dsh-conversation-toc
 ```

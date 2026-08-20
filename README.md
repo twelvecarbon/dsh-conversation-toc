@@ -53,17 +53,23 @@ dsh-conversation-toc is a **browser-side** plugin for **DeepSeek Harness Web**. 
 
 ### Option 1 (recommended): one command
 
-The package is not published to npm yet — install from **this GitHub repository** or from the **local tarball**:
+Published on **npm** — install with a single command:
 
 ```bash
-# from GitHub (after pushing this repo)
-dsh plugin --profile web add git+https://github.com/twelvecarbon/dsh-conversation-toc.git
-
-# or from a local tarball
-dsh plugin --profile web add C:\path\to\dsh-conversation-toc-0.1.1.tgz
+dsh plugin --profile web add dsh-conversation-toc
 ```
 
 Restart the dsh web service after installation.
+
+> Prefer installing from source? This GitHub repository or a local tarball work too:
+>
+> ```bash
+> # from GitHub
+> dsh plugin --profile web add git+https://github.com/twelvecarbon/dsh-conversation-toc.git
+>
+> # or from a local tarball
+> dsh plugin --profile web add C:\path\to\dsh-conversation-toc-0.1.1.tgz
+> ```
 
 ### Option 2: manual install
 
@@ -95,7 +101,7 @@ So for users, **installation is one command** — no YAML editing, no manual fil
 ### 1. Method A (recommended): one command
 
 ```bash
-dsh plugin --profile web add git+https://github.com/twelvecarbon/dsh-conversation-toc.git
+dsh plugin --profile web add dsh-conversation-toc
 ```
 
 This does three things (all automatic):
@@ -114,7 +120,7 @@ Same for other profiles (replace `web` with your profile name, e.g. `dsh plugin 
 
 ```bash
 cd ~/.dsh/profiles/web
-pnpm add git+https://github.com/twelvecarbon/dsh-conversation-toc.git
+pnpm add dsh-conversation-toc
 # or from a local folder / tarball
 # pnpm add C:\path\to\dsh-conversation-toc
 ```
