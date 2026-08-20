@@ -1,6 +1,6 @@
 {
   "name": "dsh-conversation-toc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DeepSeek Harness 对话大纲插件：在会话页右侧显示对话主题目录（类似 DeepSeek 网页版右边栏），随滚动高亮当前主题，点击可快捷跳转到对应消息位置。Conversation outline (TOC) plugin for DeepSeek Harness Web with scroll-spy highlight and jump-to-section navigation.",
   "keywords": [
     "deepseek",

@@ -60,7 +60,7 @@ The package is not published to npm yet — install from **this GitHub repositor
 dsh plugin --profile web add git+https://github.com/twelvecarbon/dsh-conversation-toc.git
 
 # or from a local tarball
-dsh plugin --profile web add C:\path\to\dsh-conversation-toc-0.1.0.tgz
+dsh plugin --profile web add C:\path\to\dsh-conversation-toc-0.1.1.tgz
 ```
 
 Restart the dsh web service after installation.
@@ -106,7 +106,7 @@ This does three things (all automatic):
 
 Same for other profiles (replace `web` with your profile name, e.g. `dsh plugin --profile headless add ...`; `dsh web` equals `dsh --profile web`).
 
-> Test a local tarball: `dsh plugin --profile web add C:\path\to\dsh-conversation-toc-0.1.0.tgz`
+> Test a local tarball: `dsh plugin --profile web add C:\path\to\dsh-conversation-toc-0.1.1.tgz`
 
 ### 2. Method B: manual install (no pnpm / no `dsh plugin`)
 

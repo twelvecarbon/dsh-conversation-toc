@@ -60,7 +60,7 @@ dsh-conversation-toc 是面向 **DeepSeek Harness Web** 的**纯浏览器端**�
 dsh plugin --profile web add git+https://github.com/twelvecarbon/dsh-conversation-toc.git
 
 # 或从本地 tarball
-dsh plugin --profile web add C:\path\to\dsh-conversation-toc-0.1.0.tgz
+dsh plugin --profile web add C:\path\to\dsh-conversation-toc-0.1.1.tgz
 ```
 
 安装后重启 dsh web 服务即可生效。
@@ -106,7 +106,7 @@ dsh plugin --profile web add git+https://github.com/twelvecarbon/dsh-conversatio
 
 其它 profile 同理，把 `web` 换成你的 profile 名即可（如 `dsh plugin --profile headless add ...`；`dsh web` 等价于 `dsh --profile web`）。
 
-> 想用本地 tarball 测试：`dsh plugin --profile web add C:\path\to\dsh-conversation-toc-0.1.0.tgz`
+> 想用本地 tarball 测试：`dsh plugin --profile web add C:\path\to\dsh-conversation-toc-0.1.1.tgz`
 
 ### 2. 方法 B：手动安装（不使用 pnpm / 无 `dsh plugin`）
 
